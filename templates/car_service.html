@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .invoice {
+            width: 800px;
+            margin: 0 auto;
+            border: 2px solid #000;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .invoice-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .invoice-header h1 {
+            margin: 0;
+        }
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+        .invoice-details p {
+            margin: 5px 0;
+        }
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .invoice-table th, .invoice-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .invoice-table th {
+            background-color: #f2f2f2;
+        }
+        .invoice-footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice">
+        <div class="invoice-header">
+            <h1>Service Invoice</h1>
+        </div>
+        <div class="invoice-details">
+            <p><strong>Invoice Number:</strong> SERV-{{ invoice_number }}</p>
+            <p><strong>Date:</strong> {{ date }}</p>
+            <p><strong>Due Date:</strong> {{ due_date }}</p>
+            <p><strong>Bill To:</strong> {{ name }}</p>
+            <p><strong>Address:</strong> {{ address }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Phone:</strong> {{ phone }}</p>
+            <p><strong>Vehicle Number:</strong> {{ vehicle_number }}</p>
+            <p><strong>Vehicle Model:</strong> {{ vehicle_model }}</p>
+        </div>
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Unit Price (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Oil and Coolant Levels Inspection</td>
+                    <td>₹400.00</td>
+                </tr>
+                <tr>
+                    <td>Air Filter Check</td>
+                    <td>₹850.00</td>
+                </tr>
+                <tr>
+                    <td>Tire Pressure and Tread Depth Check</td>
+                    <td>₹300.00</td>
+                </tr>
+                <tr>
+                    <td>Headlights, Turn Signals, Brake, and Parking Lights Inspection</td>
+                    <td>₹700.00</td>
+                </tr>
+                <tr>
+                    <td>Oil & Filter Change</td>
+                    <td>₹3000.00</td>
+                </tr>
+                <tr>
+                    <td>Tire Rotation</td>
+                    <td>₹900.00</td>
+                </tr>
+                <tr>
+                    <td>Vehicle Waxing</td>
+                    <td>₹1000.00</td>
+                </tr>
+                <tr>
+                    <td>Transmission Fluid Check</td>
+                    <td>₹200.00</td>
+                </tr>
+                <tr>
+                    <td>Transfer Case Fluid Check</td>
+                    <td>₹220.00</td>
+                </tr>
+                <tr>
+                    <td>Inspect Shocks and Struts</td>
+                    <td>₹300.00</td>
+                </tr>
+                <tr>
+                    <td>Coolant Fluid Exchange</td>
+                    <td>₹400.00</td>
+                </tr>
+                <tr>
+                    <td>Spark Plug Check</td>
+                    <td>₹200.00</td>
+                </tr>
+                <tr>
+                    <td>Serpentine Belt Inspection</td>
+                    <td>₹450.00</td>
+                </tr>
+                <tr>
+                    <td>Front and/or Rear Differential Check</td>
+                    <td>₹550.00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="1" style="text-align: right;"><strong>Total:</strong></td>
+                    <td>9470.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="invoice-footer">
+            <p>Thank you for choosing our services!</p>
+        </div>
+    </div>
+</body>
+</html>

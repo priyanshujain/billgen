@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Receipt</title>
+    <style>
+        body {
+            font-family: "Press Start 2P";
+            src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+            max-width: 320px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .main {
+            background: #FFF;
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 320px;
+        }
+        body::before {
+            background: linear-gradient(-53deg,transparent 16px,#f0eded 0),linear-gradient(34deg,transparent 14px,#f0eded 0);
+            background-repeat: repeat-x;
+            background-position: left bottom;
+            background-size: 22px 32px;
+            content: "";
+            display: block;
+            width: calc(100% + 10px);
+            height: 10px;
+            position: relative;
+            top: -15px;
+            left: 0;
+            margin-left: -5px;
+            transform: rotateX(180deg);
+            -webkit-transform: rotateX(180deg);
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 0 8px;
+            text-align: left;
+            font-size: 10px;
+        }
+        .total {
+            font-weight: bold;
+        }
+        .header {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .header p {
+            font-size: 8px;
+            padding-bottom: 0;
+            line-height: 9px;
+        }
+        .header .logo {
+            border: 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+        .footer p {
+            font-size: 9px;
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+            overflow: hidden;
+            display:inline-block;
+        }
+
+        .logo img {
+            display:block;
+        }
+
+        .key {
+            min-width: 140px;
+        }
+        .content {
+            margin: auto;
+            width: 100%;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <div class="header" style="margin-top: 100px;">
+                <div class="logo">
+                    <img src="https://ik.imagekit.io/9f22ejzbk/fuel.png" alt="Indian Oil Logo" width="96px">
+                </div>
+                <p style="font-size: 12px;">Welcome You</p>
+                <div class="header">
+                    <p>AMAR SERVICE STATION</p>
+                    <p>SY 125 OLD AIRPORT RD <br/> MARATHALLI BNG</p>
+                    <p>Tel No: 9480056969</p>
+                </div>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>Receipt No.:</td>
+                        <td>L{{ receipt_number }}</td>
+                    </tr>
+                    <tr>
+                        <td>FCC ID:</td>
+                        <td>30008522</td>
+                    </tr>
+                    <tr>
+                        <td>FIP No.:</td>
+                        <td>01</td>
+                    </tr>
+                    <tr>
+                        <td>Nozzle No.:</td>
+                        <td>01</td>
+                    </tr>
+                    <tr>
+                        <td>Product:</td>
+                        <td>Xtra Prem</td>
+                    </tr>
+                </table>
+            
+                <table>
+                    <tr>
+                        <td>Preset Type:</td>
+                        <td>Amount</td>
+                    </tr>
+                    <tr>
+                        <td>Rate (Rs/L) :</td>
+                        <td>{{ rate }}</td>
+                    </tr>
+                    <tr>
+                        <td>Volume (L) :</td>
+                        <td>000{{ volume }}</td>
+                    </tr>
+                    <tr>
+                        <td>Amount (Rs) :</td>
+                        <td>{{ amount }}</td>
+                    </tr>
+                </table>
+            
+                <table>
+                    <tr>
+                        <td>Vehicle No.:</td>
+                        <td>KA03NM7358</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile No.:</td>
+                        <td>Not Entered</td>
+                    </tr>
+                </table>
+            
+                <table>
+                    <tr>
+                        <td>Date:</td>
+                        <td>{{ date }}</td>
+                    </tr>
+                    <tr>
+                        <td>Time:</td>
+                        <td>{{ time }}</td>
+                    </tr>
+                </table>
+            
+                <table>
+                    <tr>
+                        <td>CST No :</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>LST No :</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>VAT No :</td>
+                        <td>29AADFA2746E1Z0</td>
+                    </tr>
+                    <tr>
+                        <td class="key">ATTENDANT ID :</td>
+                        <td>Not Available</td>
+                    </tr>
+                    <tr>
+                        <td>FCC DATE :</td>
+                        <td>Not Available</td>
+                    </tr>
+                    <tr>
+                        <td>FCC TIME :</td>
+                        <td>Not Available</td>
+                    </tr>
+                </table>
+            </div>
+        
+            
+        
+            <div class="footer">
+                <p>Thank You! Please Visit Again...</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

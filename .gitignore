@@ -161,3 +161,11 @@ cython_debug/
 
 files/*
 !files/.gitkeep
+!files/carservice/.gitkeep
+!files/fuel/.gitkeep
+!files/book/.gitkeep
+
+.DS_Store
+*/.DS_Store
+*/.DS_Store?
+*/._*
